@@ -1,7 +1,7 @@
+<!DOCTYPE>
 
-DOCTYPE>
 
-<html  xmlns="http://www.w3.org/1999/html">
+<html xmlns="http://www.w3.org/1999/html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport"
@@ -87,8 +87,7 @@ DOCTYPE>
 
 
 
-
-         </header>
+        </header>
 
 
        <div class="container-lg clearfix px-3 mt-4">
@@ -129,12 +128,9 @@ DOCTYPE>
                <a href="#Overview">Overview</a>
                <a href="#Repositories" class="active">Repositories</a>
                <a href="#Stars">Stars</a>
-               <a href="#Followers" class="UnderlineNav-item">
-                   <a href="#Followers" class="UnderlineNav-item">
-               </a>
-               <a href="#">Following</a>
+                 <a href="#Followers" class="UnderlineNav-item">Followers</a>
+                 <a href="#Following" class="UnderlineNav-item">Following</a>
              </div>
-
 
 
              <nav class="middle-nav">
@@ -176,10 +172,9 @@ DOCTYPE>
                 </nav>
 
             <hr/>
-            {% block content %}
+           {% block content %} {% endblock %}
+           {% block info_followers %} {% endblock %}
 
-            {% endblock %}
-{#            {% block info_followers %} {% endblock %}#}
 
             <hr/>
         </div>
@@ -195,10 +190,10 @@ DOCTYPE>
                        <li><a href="#">Privacy</a></li>
                        <li><a href="#">Security</a></li>
                        <li><a href="#">Status</a></li>
-                       <li><a href="#">Help<</a></li>
+                       <li><a href="#">Help</a></li>
                    </ul>
 
-                   <img src="#" alt="bottom_cat_lol">
+                   <img src="../static/images/package/build/svg/mark-github.svg" alt="bottom_cat">
 
                    <ul class="btm-right">
                        <li><a href="#">Contact GitHu</a></li>

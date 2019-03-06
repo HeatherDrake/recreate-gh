@@ -12,18 +12,20 @@ from flask import render_template
 
 import requests
 
-#load all the packages
-app = Flask(__name__)   #load all the packages ??? where does it look for packages
 
-#this says if the search bar shows /(just base url) insert the info from this function
+# load all the packages
+app = Flask(__name__)   # load all the packages ??? where does it look for packages
+
+
+# this says if the search bar shows /(just base url) insert the info from this function
 @app.route("/", methods=["GET"])
 # defining function that will get my info for page from github
 def index():
     # gets info from api and stores it in variable response
-    response = requests.get("https://api.github.com/users/ChristinaDRoberts")
+    response = requests.get("https://api.github.com/users/HeatherDrake")
     # gets info and stores it in response 2
-    response2 = requests.get("https://api.github.com/users/ChristinaDRoberts/repos")
-    # uses buit in function to read json and convert it to python, stores that in data variable
+    response2 = requests.get("https://api.github.com/users/HeatherDrake/repos")
+    # uses built in function to read json and convert it to python, stores that in data variable
     data = response.json()
     data2 = response2.json()
 
@@ -56,11 +58,11 @@ def index():
 @app.route('/followers/', methods=["GET"])
 
 def following_people():
-    response = requests.get("https://api.github.com/users/ChristinaDRoberts/followers")
+    response = requests.get("https://api.github.com/users/HeatherDrake/followers")
     data_followers = response.json()
 
     info_followers = {
-        "followers" : data_followers}
+        "followers": data_followers}
 
     print(data_followers)
 
