@@ -27,6 +27,7 @@ def index():
     response2 = requests.get("https://api.github.com/users/HeatherDrake/repos")
     # uses built in function to read json and convert it to python, stores that in data variable
     data = response.json()
+
     data2 = response2.json()
 
     # print(data)  # list of dict
